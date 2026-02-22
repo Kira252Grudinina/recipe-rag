@@ -1,6 +1,11 @@
 # recipe-rag
 
-a rag-based cooking assistant that answers questions about recipes from epicurious.
+![python](https://img.shields.io/badge/python-3.11+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-green)
+![docker](https://img.shields.io/badge/docker-ready-blue)
+![ollama](https://img.shields.io/badge/ollama-local-grey)
+
+a rag-based cooking assistant that answers questions about recipes.
 
 ## stack
 - langchain
