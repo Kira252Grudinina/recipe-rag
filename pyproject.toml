@@ -1,0 +1,29 @@
+[project]
+name = "recipe-rag"
+version = "0.1.0"
+description = "RAG-based recipe assistant"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+    "chromadb>=0.5.0",
+    "ollama>=0.2.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.0.0",
+    "langchain>=1.2.10",
+    "langchain-community>=0.4.1",
+    "langchain-chroma>=1.1.0",
+    "pandas>=3.0.1",
+    "matplotlib>=3.10.8",
+    "jq>=1.11.0",
+    "langchain-ollama>=1.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+]
