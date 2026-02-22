@@ -16,6 +16,21 @@ ollama installed and running with these models:
 ollama pull nomic-embed-text
 ollama pull qwen2.5:7b-instruct
 ```
+## data
+
+download the dataset from https://eightportions.com/datasets/Recipes/#fn:1
+
+place the json files in `data/raw/`:
+```
+data/raw/recipes_raw_nosource_epi.json
+data/raw/recipes_raw_nosource_fn.json
+data/raw/recipes_raw_nosource_ar.json
+```
+
+then run indexing (uses epicurious by default, ~30 min on cpu):
+```
+uv run scripts/index.py
+```
 
 ## run with docker
 ```
