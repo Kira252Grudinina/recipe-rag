@@ -2,8 +2,12 @@
 __pycache__
 .DS_Store
 .env
-data/raw
+data/raw/
+data/chroma/
 notebooks/.ipynb_checkpoints
 *.pyc
-data/chroma
-data/chroma
+*.pyo
+.pytest_cache
+dist/
+build/
+*.egg-info/
