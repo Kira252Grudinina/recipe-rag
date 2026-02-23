@@ -1,5 +1,4 @@
 # Recipe RAG Assistant
-
 ![python](https://img.shields.io/badge/python-3.11+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-green)
 ![docker](https://img.shields.io/badge/docker-ready-blue)
@@ -15,7 +14,6 @@ a rag-based cooking assistant that answers questions about recipes.
 - uv
 
 ## requirements
-
 - python 3.11+
 - pip install uv
 - ollama installed and running (https://ollama.com/download)
@@ -27,7 +25,6 @@ ollama pull qwen2.5:7b-instruct
 ```
 
 ## data
-
 download the dataset from https://eightportions.com/datasets/Recipes/#fn:1
 
 place the json files in `data/raw/`:
@@ -37,14 +34,18 @@ data/raw/recipes_raw_nosource_fn.json
 data/raw/recipes_raw_nosource_ar.json
 ```
 
-then run indexing (uses epicurious by default, ~30 min on cpu):
+## run with docker
+make sure ollama is running, then:
 ```
 uv run scripts/index.py
+docker compose up --build
 ```
 
-## run with docker
+## local setup
 ```
-docker compose up --build
+uv sync
+uv run scripts/index.py
+uv run uvicorn src.api:app --reload
 ```
 
 ## test
@@ -55,13 +56,6 @@ curl -X POST http://localhost:8000/ask \
 ```
 ```
 curl http://localhost:8000/health
-```
-
-## local setup
-```
-uv sync
-uv run scripts/index.py
-uv run uvicorn src.api:app --reload
 ```
 
 ## notes
