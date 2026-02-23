@@ -16,11 +16,16 @@ a rag-based cooking assistant that answers questions about recipes.
 
 ## requirements
 
-ollama installed and running with these models:
+- python 3.11+
+- pip install uv
+- ollama installed and running (https://ollama.com/download)
+
+then pull the models:
 ```
 ollama pull nomic-embed-text
 ollama pull qwen2.5:7b-instruct
 ```
+
 ## data
 
 download the dataset from https://eightportions.com/datasets/Recipes/#fn:1
